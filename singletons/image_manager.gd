@@ -12,8 +12,8 @@ func add_item_to_list(fn: String, path: String) -> void:
 	var full_path = path + "/" + fn
 	
 	var ii_dict = {
-		"item_name": fn.rstrip(".png"),
-		"item_texture": load(full_path)
+		"item_name": fn.rstrip(".png"), #removes .png at end of file name
+		"item_texture": load(full_path) #gathers the image sprite at the path
 	}
 	
 	_item_images.append(ii_dict)
@@ -31,4 +31,8 @@ func load_item_images() -> void:
 	for fn in file_names:
 		if ".import" not in fn:
 			add_item_to_list(fn, path)
+
+
+func get_random_item_image() -> Dictionary:
+	return _item_images.pick_random()
 

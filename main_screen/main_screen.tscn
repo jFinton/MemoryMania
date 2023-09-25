@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxnxfdquqn6pj"]
+
+[ext_resource type="FontFile" uid="uid://bxm3nyddiamls" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="1_p7tpb"]
+[ext_resource type="PackedScene" uid="uid://b788t8yfflqj2" path="res://front_sprite/front_sprite.tscn" id="2_xxgda"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4m673"]
+font = ExtResource("1_p7tpb")
+font_size = 84
+font_color = Color(0.752941, 1, 0.717647, 1)
+outline_size = 6
+outline_color = Color(0.0117647, 0.45098, 0.0352941, 1)
+
+[node name="MainScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0980392, 0, 0.611765, 0.160784)
+
+[node name="VB" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spacer4" type="Control" parent="VB"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TitleLabel" type="Label" parent="VB"]
+layout_mode = 2
+text = "MEMORY MANIA"
+label_settings = SubResource("LabelSettings_4m673")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer2" type="Control" parent="VB"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBLevels" type="HBoxContainer" parent="VB"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Spacer3" type="Control" parent="VB"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBSprites" type="HBoxContainer" parent="VB"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 120
+
+[node name="FrontSprite" parent="VB/HBSprites" instance=ExtResource("2_xxgda")]
+layout_mode = 2
+
+[node name="FrontSprite2" parent="VB/HBSprites" instance=ExtResource("2_xxgda")]
+layout_mode = 2
+
+[node name="FrontSprite3" parent="VB/HBSprites" instance=ExtResource("2_xxgda")]
+layout_mode = 2
+
+[node name="FrontSprite4" parent="VB/HBSprites" instance=ExtResource("2_xxgda")]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="VB"]
+layout_mode = 2
+size_flags_vertical = 3
