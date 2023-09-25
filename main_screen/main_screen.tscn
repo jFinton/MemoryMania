@@ -1,14 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxnxfdquqn6pj"]
+[gd_scene load_steps=5 format=3 uid="uid://bxnxfdquqn6pj"]
 
-[ext_resource type="FontFile" uid="uid://bxm3nyddiamls" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="1_p7tpb"]
+[ext_resource type="Script" path="res://main_screen/main_screen.gd" id="1_bpaqn"]
+[ext_resource type="LabelSettings" uid="uid://chjnfhvria8fq" path="res://assets/fonts/LG_84_LightGreen.tres" id="1_vhp0d"]
+[ext_resource type="PackedScene" uid="uid://dt8mmumfxl3gc" path="res://level_button/level_button.tscn" id="2_bv38c"]
 [ext_resource type="PackedScene" uid="uid://b788t8yfflqj2" path="res://front_sprite/front_sprite.tscn" id="2_xxgda"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_4m673"]
-font = ExtResource("1_p7tpb")
-font_size = 84
-font_color = Color(0.752941, 1, 0.717647, 1)
-outline_size = 6
-outline_color = Color(0.0117647, 0.45098, 0.0352941, 1)
 
 [node name="MainScreen" type="Control"]
 layout_mode = 3
@@ -17,6 +12,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_bpaqn")
+level_button_scene = ExtResource("2_bv38c")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -42,7 +39,7 @@ size_flags_vertical = 3
 [node name="TitleLabel" type="Label" parent="VB"]
 layout_mode = 2
 text = "MEMORY MANIA"
-label_settings = SubResource("LabelSettings_4m673")
+label_settings = ExtResource("1_vhp0d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -53,6 +50,7 @@ size_flags_vertical = 3
 [node name="HBLevels" type="HBoxContainer" parent="VB"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_constants/separation = 10
 
 [node name="Spacer3" type="Control" parent="VB"]
 layout_mode = 2

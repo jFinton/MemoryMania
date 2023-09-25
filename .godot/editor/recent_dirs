@@ -1,6 +1,7 @@
-res://front_sprite
-res://assets/fonts
-res://main_screen
 res://singletons
+res://assets/fonts
+res://level_button
+res://front_sprite
+res://main_screen
 res://master_scene
 res://

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1695622012
+::res://::1695664663
 icon.png::CompressedTexture2D::4199176060624519439::1695493107::1695493108::1::::<><>::
 ::res://assets/::1695493107
 ::res://assets/fonts/::1695493107
@@ -79,7 +79,12 @@ level_select_frame_hover_128.png::CompressedTexture2D::1718530069949044722::1695
 level_select_frame_select_128.png::CompressedTexture2D::1022460899478032286::1695493107::1695493108::1::::<><>::
 UIbg.png::CompressedTexture2D::3052055579185670708::1695493107::1695493108::1::::<><>::
 yellow_button00.png::CompressedTexture2D::7241992282768847740::1695493107::1695493108::1::::<><>::
-::res://master_scene/::1695578421
-master_scene.tscn::PackedScene::8506888502045218465::1695578421::0::1::::<><>::uid://movdn31hwu82::::res://assets/images/backgroundEmpty.png
-::res://singletons/::1695578421
-image_manager.gd::GDScript::-1::1695578421::0::1::::<>Node<>::
+::res://front_sprite/::1695625201
+front_sprite.gd::GDScript::-1::1695625160::0::1::::<>TextureRect<>::
+front_sprite.tscn::PackedScene::4702627507419766997::1695625201::0::1::::<><>::uid://cllwnucf6rxlf::::res://assets/glitch/cabbage.png<>res://front_sprite/front_sprite.gd
+::res://main_screen/::1695625291
+main_screen.tscn::PackedScene::4029006601191334379::1695625291::0::1::::<><>::uid://bxm3nyddiamls::::res://assets/fonts/LuckiestGuy-Regular.ttf<>uid://b788t8yfflqj2::::res://front_sprite/front_sprite.tscn
+::res://master_scene/::1695625201
+master_scene.tscn::PackedScene::8506888502045218465::1695625201::0::1::::<><>::uid://movdn31hwu82::::res://assets/images/backgroundEmpty.png<>uid://bxnxfdquqn6pj::::res://main_screen/main_screen.tscn
+::res://singletons/::1695624996
+image_manager.gd::GDScript::-1::1695624996::0::1::::<>Node<>::
