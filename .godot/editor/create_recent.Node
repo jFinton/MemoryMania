@@ -1,9 +1,12 @@
-AudioStreamPlayer
-Label
-TextureButton
 TextureRect
+Sprite2D
+TextureButton
+AudioStreamPlayer
 Control
+Label
 HBoxContainer
 VBoxContainer
+MarginContainer
+GridContainer
 ColorRect
 CanvasLayer
