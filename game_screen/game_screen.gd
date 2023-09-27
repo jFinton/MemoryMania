@@ -6,6 +6,9 @@ extends Control
 
 @onready var tile_container: GridContainer = $HB/MC1/TileContainer
 @onready var sound: AudioStreamPlayer = $Sound
+@onready var scorer: Scorer = $Scorer
+@onready var moves_label: Label = $HB/MC2/VB/HB/MovesLabel
+@onready var pairs_label: Label = $HB/MC2/VB/HB2/PairsLabel
 
 
 # Called when the node enters the scene tree for the first time.
@@ -15,7 +18,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	moves_label.text = scorer.get_moves_made_str()
+	pairs_label.text = scorer.get_pairs_made_str()
 
 
 func _on_exit_button_pressed() -> void:
@@ -32,6 +36,8 @@ func on_level_selected(level_num: int) -> void:
 	
 	for ii_dict in level_selected["image_list"]:
 		add_memory_tile(ii_dict, frame_image)
+	
+	scorer.clear_new_game(level_selected["target_pairs"])
 
 
 func add_memory_tile(ii_dict: Dictionary, frame_image: CompressedTexture2D) -> void:
